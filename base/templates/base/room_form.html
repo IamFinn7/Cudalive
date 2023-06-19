@@ -1,0 +1,179 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <div class="create_room">
+        <div class="container_create">
+            <div class="header">
+                <i class='bx bx-x' id="close" style="cursor: pointer;"></i>
+                <span id="kha">Create a room</span>
+                <span id="finn">Your room is where you and your friends hand out. Make yours and start
+                    watching</span>
+            </div>
+
+            <div class="footer">
+                <i class='bx bxs-camera bx-lg bx-border-circle'></i>
+                <h5>UPLOAD PHOTO</h5>
+                <form>
+                    <select id="type_room">
+                        <option>Type room</option>
+                        <option>TPHCM - Mui Ne</option>
+                        <option>TPHCM - Ca Mau</option>
+                        <option>TPHCM - Vung Tau</option>
+                        <option>TPHCM - Da Lat</option>
+                        <option>TPHCM - Ho Tram</option>
+                    </select><br>
+                </form>
+                <input id="room_name" name="room_name" placeholder="Room name"><br>
+                <input id="password" name="password" placeholder="Password"><br>
+                <button>CREATE</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container_wapper">
+        <!-- --------------------------------------LEFT-------------------------------------- -->
+        <div class="container_left">
+
+            <div class="first">
+                <div class="add_room">
+                    <input placeholder="Find room""></input>
+                    <div class=" icon_addRoom" id="create">
+                    <i class='bx bx-message-square-add' style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="empty_left"></div>
+
+        <div class="second">
+            {% for room in all_rooms %}
+            <div class="room">
+                <a href="/room/{{room.id}}">
+                    <img src="{{ room.image.url }}" alt="">
+                </a>
+                <div class="select_room">
+                    <a href="/room/{{room.id}}" class="name_room">{{room.name}}</a>
+                    <div class="detail_room">
+                        {{room.description}}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="empty_left">
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------MIDDLE------------------------------------- -->
+    <div class="container_middle">
+
+        <!-- Video xem chung -->
+        <div class="youtube">
+            <iframe src="https://www.youtube.com/embed/QqvZmqdY6Qg?controls=0&amp;autoplay=1&amp;"" title=" YouTube
+                video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
+
+        <!-- khoảng trống -->
+        <div class="empty_middle"></div>
+
+        <!-- Danh sách hàng đợi -->
+        <div class="playlist_container">
+            <!-- Thêm vào queue -->
+            <div class="add_queue">
+                <p>ADD LIST</p>
+                <input type="text" placeholder="Add Here"></input>
+                <button><i class='bx bxs-send'></i></button>
+            </div>
+
+            <!-- PLAYLIST phát -->
+            <div class="playlist">
+                {% for vid in videos %}
+
+                <div class="vid">
+                    <div><img src="http://img.youtube.com/vi/{{vid.link}}/sddefault.jpg" alt=""></div>
+                    <div class="details_vid">
+                        <span id="{{vid.link}}" class="vid__title"></span>
+                    </div>
+                    <div class="time">Time</div>
+                    <div class="start"><i class='bx bx-play-circle'></i></div>
+                </div>
+                {% endfor %}
+
+                <script>
+                    // Gọi hàm getYouTubeVideoTitle khi trang đã tải xong
+                    window.addEventListener('load', function () {
+                        updateVideoTitles();
+                    });
+
+                    // Gọi hàm getYouTubeVideoTitle khi trang HTML đã tải xong
+                    document.addEventListener('DOMContentLoaded', function () {
+                        updateVideoTitles();
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------RIGHT-------------------------------------- -->
+    <div class="container_right">
+        <div class="chat">
+            <div class="live_chat">
+                <div class="bar bar1">
+                    <h2 class="p2">Live chat</h2>
+                    <i class='bx bxs-user'></i>
+                </div>
+            </div>
+
+            <div class="users_list">
+                {% for message in messages %}
+
+                <div class="utl">
+                    <img src="chanyeol.jpg" alt="">
+                    <div class="details">
+                        <span>{{message.user}}</span>
+                        <div class="comment">{{message.body}}</div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+            <div class="under_comment">
+                <input type="text" placeholder="Chat Here"></input>
+                <button><i class='bx bxs-send'></i></button>
+            </div>
+        </div>
+
+
+        <div class="empty_right"></div>
+
+        <div class="login">
+            <div class="ava_login">
+                <img src="user_main.jpg" alt="">
+            </div>
+            <div class="name_login">
+                <span>Cong chua bong bong</span>
+            </div>
+            <div class="icon-func">
+                <i class='bx bxs-hand '></i>
+                <i class='bx bxs-cog'></i>
+                <i class='bx bxs-bell'></i>
+            </div>
+        </div>
+
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+
+
+</body>
+{% endblock content %}

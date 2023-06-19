@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+:root {
+    --primary-color: #1f1e2e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: white;
+    font-family: 'Single Day', cursive;
+    font-size: large;
+}
+
+.container_wapper {
+    width: 100%;
+    height: 100%;
+    background: #232231;
+    display: flex;
+}
+
+.container_left {
+    flex-basis: 18%;
+    background: var(--primary-color);
+    margin: 15px 15px 15px 15px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.container_middle {
+    flex-basis: 52%;
+    background: var(--primary-color);
+    margin: 15px 15px 15px 0;
+}
+
+.container_right {
+    flex-basis: 30%;
+    margin: 15px 15px 15px 0;
+}
+
+
+.login {
+    height: 15%;
+    background: var(--primary-color);
+    border-radius: 20px;
+    border: 2px solid white;
+    display: flex;
+}
+
+
+.ava_login {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ava_login img {
+    width: auto;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.name_login {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name_login span {
+    font-size: 25px;
+}
+
+.icon-func {
+    width: 32%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+}
+
+.icon-func i {
+    font-size: 26px;
+    display: block;
+    margin: auto 0;
+}
+
+.empty_right {
+    height: 2%;
+    visibility: hidden;
+}
+
+.chat {
+    height: 82%;
+    background: var(--primary-color);
+    border-radius: 20px;
+    border: 2px solid white;
+
+}
+
+.live_chat {
+    width: 100%;
+    height: 15%;
+    border-bottom: 2px solid white;
+}
+
+.bar1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.users_list {
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    margin: 10px 0 5px 0;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+
+.utl img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.utl {
+    display: flex;
+    margin: 10px 5px 25px 15px;
+}
+
+.details {
+    width: 100%;
+    height: 10%;
+    margin-left: 15px;
+}
+
+.utl span {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.comment {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.under_comment {
+    height: 15%;
+    border-top: 2px solid white;
+}
+
+.under_comment input {
+    width: 70%;
+    height: 40%;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin: 10px 25px 0 20px;
+}
+
+.under_comment button {
+    height: 40%;
+    width: 12%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: white;
+    margin: 10px 0 0 0;
+}
+
+.youtube iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.youtube {
+    width: 100%;
+    height: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty_middle {
+    height: 5%;
+    visibility: hidden;
+}
+
+.playlist_container {
+    width: 100%;
+    height: 43%;
+    background: var(--primary-color);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.add_queue {
+    width: 100%;
+    height: 25%;
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.add_queue p {
+    margin-left: 20px;
+    margin-right: 100px;
+    font-size: 20px;
+}
+
+.add_queue input {
+    width: 50%;
+    height: 50%;
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    margin: 0 15px 0 20px;
+}
+
+.add_queue button {
+    height: 50%;
+    width: 8%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: white;
+}
+
+.playlist {
+    width: 100%;
+    height: 75%;
+    overflow-y: auto;
+}
+
+.playlist::-webkit-scrollbar {
+    display: none;
+}
+
+
+.vid {
+    width: 90%;
+    height: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+}
+
+.vid img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumnail {
+    width: 20%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+.details_vid {
+    width: 65%;
+    height: 100%;
+    padding: 2px 0 0 10px;
+    overflow-y: hidden;
+
+}
+
+.vid__title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.time {
+    width: 12%;
+    height: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start {
+    width: 9%;
+    height: 100%;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+}
+
+.first {
+    width: 100%;
+    height: 11%;
+    border-bottom: 2px solid white;
+    position: relative;
+    text-align: center;
+}
+
+.first img {
+    width: 60px;
+    height: 60px;
+    border-radius: 15%;
+    object-fit: cover;
+}
+
+.first h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+}
+
+.empty_left {
+    height: 3%;
+    visibility: hidden;
+}
+
+.second {
+    width: 100%;
+    height: 83%;
+    overflow-y: auto;
+}
+
+.room {
+    width: 92%;
+    height: 15%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+}
+
+.room img {
+    width: auto;
+    height: 90%;
+    border-radius: 15%;
+    object-fit: cover;
+    border: 1px solid white;
+    margin: auto 0;
+    margin-left: 5%;
+}
+
+.room a {
+    color: white;
+    text-decoration: none;
+}
+
+.select_room {
+    width: 100%;
+    height: 100%;
+    margin: 0 2%;
+    overflow-y: hidden;
+    padding-left: 3%;
+}
+
+.select_room::-webkit-scrollbar {
+    display: none;
+}
+
+.name_room {
+    font-size: 23px;
+    margin-top: 8%;
+}
+
+.detail_room {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.add_room {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.add_room input {
+    width: 85%;
+    height: 40%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: white;
+    padding-left: 10px;
+}
+
+.icon_addRoom {
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_addRoom i {
+    font-size: 25px;
+}
+
+.create_room {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.container_create {
+    width: 30%;
+    height: 75%;
+    background: white;
+    border-radius: 10px;
+    color: #1f1e2e;
+}
+
+.header {
+    width: 100%;
+    height: 29.96%;
+    overflow-y: hidden;
+    background: rgb(31, 30, 46, 0.9);
+    color: white;
+    border-top-right-radius: 10px;
+}
+
+.header i {
+    font-size: 28px;
+    display: block;
+    height: 30%;
+    text-align: right;
+    padding-top: 1%;
+    padding-right: 2%;
+}
+
+#kha {
+    display: block;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+#finn {
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.footer {
+    width: 100%;
+    height: 68%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.footer i {
+    border: 1px dashed black;
+    margin-bottom: 1%;
+}
+
+#type_room {
+    border: 1px solid black;
+    outline: none;
+    width: 70%;
+    padding: 1% 1%;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #888;
+    margin-top: 5%;
+}
+
+#room_name {
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    margin-top: 5%;
+    padding: 1% 1%;
+    font-size: 12px;
+    color: #888;
+    width: 70%;
+}
+
+#password {
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    margin-top: 1%;
+    padding: 1% 1%;
+    font-size: 12px;
+    color: #888;
+    width: 70%;
+}
+
+.footer button {
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    background: rgb(31, 30, 46, 0.9);
+    margin-top: 10%;
+    font-weight: bold;
+    color: white;
+    padding: 1% 1%;
+}
