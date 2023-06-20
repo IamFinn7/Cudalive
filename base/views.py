@@ -19,3 +19,6 @@ def room(request, id):
     context = {'videos': playlist, 'all_rooms': all_rooms, 'room': room, 'messages': messages}
     
     return render(request, 'base/room_form.html', context)
+
+def login(request):
+    return render(request, 'base/login.html')
